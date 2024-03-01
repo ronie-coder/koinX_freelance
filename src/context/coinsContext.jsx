@@ -11,7 +11,7 @@ export const CoinContextProvider = ({ children }) => {
   const [trendingCoins, setTrendingCoins] = useState([]);
   const [priceUSD, setPriceUSD] = useState({});
   const [priceINR, setPriceINR] = useState({});
-
+  const[bitcoinPriceChange, setBitcoinPricechange] = useState(null);
   useEffect(() => {
     try {
       const fetchAll = async () => {
@@ -55,6 +55,19 @@ export const CoinContextProvider = ({ children }) => {
       console.log(error);
     }
   }, [axios]);
+  useEffect(()=>{
+    try {
+        const fetchAll = async()=>{
+            const res = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&order=market_cap_desc&per_page=100&page=1&sparkline=true&locale=en",{crossDomain : true})
+            setBitcoinPricechange(res?.data[0]?.price_change_percentage_24h)
+        }
+        fetchAll()
+    } catch (error) {
+        console.log(error);
+    }
+    
+},[axios])
+
 
   return <coinContext.Provider>{children}</coinContext.Provider>;
 };
