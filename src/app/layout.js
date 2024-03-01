@@ -16,7 +16,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
       <CoinContextProvider>
         <Navbar></Navbar>
+        <div className=" w-[full] h-[full] flex items-center justify-center bg-[#eff2f5] overflow-x-hidden">
         {children}
+        </div>
         </CoinContextProvider>
         </body>
     </html>

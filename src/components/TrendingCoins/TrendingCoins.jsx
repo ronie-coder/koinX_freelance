@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import TrendingCoinsBanner from '../TrendingCoinsbanner/TrendingCoinsBanner'
 import { useContext } from 'react'
