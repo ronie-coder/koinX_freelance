@@ -10,7 +10,7 @@ const MiniChartCarousel = ({data,id}) => {
 
   const handleScroll = (e) =>{
     e.preventDefault();
-    console.log(e);
+    
     container.current.scrollBy({
       left: e.deltaY < 0 ? -100 : 100,
       
