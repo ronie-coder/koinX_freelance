@@ -1,9 +1,8 @@
 "use client"
 import React from 'react'
-import { AgChartsReact } from "ag-charts-react";
+
 import { useEffect, useState } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import axios from 'axios'
+
 const MiniChart = ({i}) => {
   const [options, setOptions] = useState({});
   const [data, setData] = useState([])
