@@ -1,5 +1,5 @@
 "use client"
-import Image from "next/image";
+
 import PageDirectoryShow from "@/components/page directory/PageDirectoryShow";
 import GraphTrendingContain from "@/components/Graph and trending Container/GraphTrendingContain";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike/YouMayAlsoLike";

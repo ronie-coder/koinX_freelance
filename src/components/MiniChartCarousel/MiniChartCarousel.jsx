@@ -1,16 +1,17 @@
 "use client"
-import React from 'react'
+import React,{useRef} from 'react'
 import MiniChart from '../Mini Chart/MiniChart'
 
 
 
 
 const MiniChartCarousel = ({data,id}) => {
- const scrollContainer = document.getElementById(id);
+  const container = useRef()
+
   const handleScroll = (e) =>{
     e.preventDefault();
     console.log(e);
-    scrollContainer.scrollBy({
+    container.current.scrollBy({
       left: e.deltaY < 0 ? -100 : 100,
       
     });
@@ -80,9 +81,9 @@ const MiniChartCarousel = ({data,id}) => {
 </defs>
 </svg>
 
-<div id={id}  onWheel={(e) => handleScroll(e)} className="myElement whitespace-nowrap w-full h-[180px]  flex items-center gap-[10px] overflow-x-hidden  scroll-smooth">
+<div id={id} ref={container}  onWheel={(e) => handleScroll(e)} className="myElement whitespace-nowrap w-full h-[180px]  flex items-center gap-[10px] overflow-x-scroll  scroll-smooth">
       {data?.map((i)=>(
-         <MiniChart i={i}></MiniChart>
+         <MiniChart key={i.id} i={i}></MiniChart>
       ))}
      
      </div>

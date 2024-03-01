@@ -171,7 +171,7 @@ KoinX allows you to be more educated and aware of your tax reports.</div>
       <div className="h-[225px] w-full bg-white rounded-[8px] flex flex-col z-[6] justify-around px-4 max-[411px]:w-full max-[411px]:min-h-[250px] max-[411px]:justify-between ">
         <div className="w-full h-[29px] text-[24px] font-[600] leading-[28.8px]  max-[411px]:mt-3 max-[411px]:justify-between ">Trending Coins (24H)</div>
         {trendingCoins?.coins?.slice(0,3).map((i)=>(
-            <TrendingCoinsBanner i={i}></TrendingCoinsBanner>
+            <TrendingCoinsBanner key={i.id} i={i}></TrendingCoinsBanner>
         ))}
         
        
