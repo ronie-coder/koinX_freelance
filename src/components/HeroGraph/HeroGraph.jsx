@@ -9,7 +9,36 @@ const HeroGraph = () => {
   const {priceUSD, priceINR, bitcoinPriceChange} = useContext(coinContext)
 
   
-  
+  useEffect(
+    () => {
+      const script = document.createElement("script");
+      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
+      script.type = "text/javascript";
+      script.async = true;
+      script.innerHTML = `
+        {
+          "autosize": true,
+          "symbol": "BITSTAMP:BTCUSD",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "light",
+          "style": "3",
+          "locale": "en",
+          "enable_publishing": false,
+          "hide_top_toolbar": true,
+          "hide_legend": true,
+          "save_image": false,
+          "calendar": false,
+          "hide_volume": true,
+          "move_scale_to_left": true,
+          "support_host": "https://www.tradingview.com"
+        }`;
+      container.current.appendChild(script);
+    },
+    []
+  );
+
+ 
   return (
     <div className="w-[881px] h-[711px] bg-white flex flex-col items-center gap-8 py-5 rounded-lg  max-[411px]:max-w-[384px]  max-[411px]:gap-6 max-[411px]:h-[445px] max-[411px]:relative max-[411px]:mt-[68px]">
       <div className=" w-[95%] h-[40px] self-start px-10 flex items-center gap-1 max-[411px]:px-6 max-[411px]:absolute max-[411px]:top-[-60px]">
@@ -63,12 +92,10 @@ const HeroGraph = () => {
           <div>ALL</div>
         </div>
       </div>
-
       <div className="w-[95%] h-[410px] z-[2] overflow-hidden max-[411px]:w-[344px] max-[411px]:h-[216px]">
-      <div className="tradingview-widget-container" style={{ height: "100%", width: "100%" }}>
+      <div className="tradingview-widget-container" ref={container} style={{ height: "100%", width: "100%" }}>
       <div className="tradingview-widget-container__widget" style={{ height: "calc(100% - 32px)", width: "100%" }}></div>
-      
-    </div>
+      </div>
       </div>
     </div>
   );
