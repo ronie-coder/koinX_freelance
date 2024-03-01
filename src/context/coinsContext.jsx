@@ -69,5 +69,5 @@ export const CoinContextProvider = ({ children }) => {
 },[axios])
 
 
-  return <coinContext.Provider>{children}</coinContext.Provider>;
+  return <coinContext.Provider value={{priceUSD,priceINR,trendingCoins,bitcoinPriceChange}}>{children}</coinContext.Provider>;
 };
