@@ -4,8 +4,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 
 const MiniChart = ({i}) => {
-  const [options, setOptions] = useState({});
-  const [data, setData] = useState([])
+  
   const[down, setDown] = useState(false)
   useEffect(()=>{
     if(i.item.data.price_change_percentage_24h.usd > 0){

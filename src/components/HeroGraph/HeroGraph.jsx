@@ -8,7 +8,7 @@ import { coinContext } from "@/context/coinsContext";
 const HeroGraph = () => {
   const {priceUSD, priceINR, bitcoinPriceChange} = useContext(coinContext)
   const [down, setDown] = useState(false);
-  const [data, setdata] = useState([]);
+ 
   
   const container = useRef();
   

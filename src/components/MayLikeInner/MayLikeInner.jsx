@@ -3,7 +3,7 @@ import React from 'react'
 import MiniChartCarousel from '../MiniChartCarousel/MiniChartCarousel'
 import { coinContext } from '@/context/coinsContext'
 import { useContext } from 'react'
-import { useState } from 'react'
+
 const MayLikeInner = () => {
 
   

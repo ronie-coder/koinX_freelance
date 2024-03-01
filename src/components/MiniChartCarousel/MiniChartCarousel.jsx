@@ -2,9 +2,7 @@
 import React from 'react'
 import MiniChart from '../Mini Chart/MiniChart'
 
-import { coinContext } from '@/context/coinsContext'
-import { useContext } from 'react'
-import { useRef } from 'react'
+
 
 
 const MiniChartCarousel = ({data,id}) => {
