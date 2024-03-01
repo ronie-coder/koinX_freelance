@@ -6,7 +6,7 @@ const Navbar = () => {
         <div className="">
             <img src="/loinx_logo.png" className="w-[96px] " alt="" />
         </div>
-        <svg className="hidden max-[414px]:inline" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="hidden cursor-pointer max-[414px]:inline" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.01196 9.80626V7.52161H24.5738V9.80626H4.01196ZM4.01196 15.5182H24.5738V13.2335H4.01196V15.5182ZM4.01196 21.23H24.5738V18.9454H4.01196V21.23Z" fill="#0B182F"/>
 </svg>
 
