@@ -7,7 +7,10 @@ import { useEffect, useState, useContext ,useRef, memo } from "react";
 import { coinContext } from "@/context/coinsContext";
 const HeroGraph = () => {
   const {priceUSD, priceINR, bitcoinPriceChange} = useContext(coinContext)
-
+  const [down, setDown] = useState(false);
+  const [data, setdata] = useState([]);
+  
+  const container = useRef();
   
   useEffect(
     () => {
@@ -37,7 +40,13 @@ const HeroGraph = () => {
     },
     []
   );
-
+  useEffect(()=>{
+    if(bitcoinPriceChange > 0){
+      setDown(false);
+    }else{
+      setDown(true)
+    }
+  },[bitcoinPriceChange])
  
   return (
     <div className="w-[881px] h-[711px] bg-white flex flex-col items-center gap-8 py-5 rounded-lg  max-[411px]:max-w-[384px]  max-[411px]:gap-6 max-[411px]:h-[445px] max-[411px]:relative max-[411px]:mt-[68px]">
