@@ -159,7 +159,7 @@ KoinX allows you to be more educated and aware of your tax reports.</div>
 </defs>
 </svg>
 <div className="w-[237px] h-[48px] bg-white text-black flex items-center justify-center text-[16px] font-[600] rounded-[8px] gap-2 max-[411px]:h-[30px]">
-<div className="max-[411px]:text-[11px]">Get Started for FREE</div>
+<div className="max-[411px]:text-[11px] cursor-pointer">Get Started for FREE</div>
 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M16.9583 9.99492H4.45831" stroke="#0F1629" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M11.9168 4.97459L16.9585 9.99459L11.9168 15.0154" stroke="#0F1629" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
