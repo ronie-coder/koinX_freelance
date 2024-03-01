@@ -4,7 +4,7 @@ import { coinContext } from '@/context/coinsContext'
 import { useContext } from 'react'
 const TrendingInner = () => {
   const {trendingCoins} = useContext(coinContext);
- console.log(trendingCoins);
+ 
   const reversedArray = []
 
 for(let i = trendingCoins?.coins?.length - 1; i >=1 ; i--) {

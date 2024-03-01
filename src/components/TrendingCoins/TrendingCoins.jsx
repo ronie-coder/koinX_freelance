@@ -6,7 +6,7 @@ import { coinContext } from '@/context/coinsContext'
 
 const TrendingCoins = () => {
   const {trendingCoins} = useContext(coinContext);
-  console.log(trendingCoins);
+ 
   return (
     <div className="w-[426px] h-full  flex flex-col justify-between gap-4 items-center max-[411px]:w-full max-[411px]:h-[700px] max-[411px]:gap-5 max-[411px]:mb-9 max-[411px]:absolute max-[411px]:bottom-0">
       <div className="w-[426px] h-[515px] bg-[#0052FE] rounded-[8px] flex flex-col items-center justify-center gap-5 max-[411px]:h-[400px] max-[411px]:w-[379px] max-[411px]:gap-2">
