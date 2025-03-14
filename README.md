@@ -15,6 +15,7 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://drive.google.com/file/d/1If8OPsdayPz8EYOdZRTIAZV4tq0G0UJ7/view
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
